@@ -1,0 +1,74 @@
+body{
+    background-color: #F6F6F6;
+}
+button{
+    background-color:rgb(26, 185, 132) ;
+    color: #6e1010;
+    border-radius: 5px;
+    border-color: black;
+}
+
+.mainCL{
+    display: flex;
+    justify-content: space-around;
+}
+.sec{
+    width: 70%;
+    height: auto;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#rigth,#left{
+    position: fixed;
+    top:200px;
+    background-color: rgb(26, 185, 132);
+    height:  70px;
+    border-radius: 40px;
+}
+#rigth{
+    right: 100px;
+}
+#left{
+    left: 100px;
+}
+#rigth>img{
+    height:  70px;
+    width: 70px;
+    
+}
+#left>img{
+    height:  70px;
+    width: 70px;
+}
+#left:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+#rigth:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+#formDish{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#formDish div{
+    margin-bottom: 10px;
+}
+#desc{
+    resize: none;
+    
+}
+#dishes{
+    height: max-content;    
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#sortAndFilt{
+    flex-direction: row;
+    justify-content: space-around;
+}

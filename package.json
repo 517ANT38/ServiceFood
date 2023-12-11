@@ -1,0 +1,15 @@
+{
+  "name": "servicefood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "\"\"",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"tsc --watch"
+  },
+  "author": "Anton",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.2"
+  }
+}

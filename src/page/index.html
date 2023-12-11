@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\style\HeaderNavBody.css">
+    <link rel="stylesheet" href="..\style\Main.css">
+    <link rel="stylesheet" href="..\style\dishStyle.css">
+    <link rel="stylesheet" href="..\style\sortAndFilter.css">
+    <link rel="stylesheet" href="..\style\Adapt.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="headPage">
+        <h1>Сервис доставки еды</h1>
+        <!-- <nav class="navePage">
+            <p><img src="" alt=""> <span>Настройки</span></p>           
+            <p><a href="">Log in</a><span>|</span><a href="">Log out</a></p>
+        </nav> -->
+    </header>
+    <main class="mainCL">
+        <div id="left"><img src="../image/left.png" alt="" srcset=""></div>
+        <section class="sec" id="sortAndFilt" >
+            <div class="settings">
+                <h4>Сортировка</h4>
+                <div class="setti">
+                    <div>
+                        <label for="id">Стандартная</label>
+                        <input type="checkbox" name="id" id="">
+                        <div>
+                            <label for="rId">По возростанию</label>
+                            <input type="radio" name="rId" value="asc">
+                            <label for="rId">По убыванию</label>
+                            <input type="radio" name="rId" value="desc">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="price">По стоимости</label>
+                        <input type="checkbox" name="price" id="">
+                        <div>
+                            <label for="rPrice">По возростанию</label>
+                            <input type="radio" name="rPrice" value="asc">
+                            <label for="rPrice">По убыванию</label>
+                            <input type="radio" name="rPrice" value="desc">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="name">По названию</label>
+                        <input type="checkbox" name="name" id="">
+                        <div>
+                            <label for="rName">По возростанию</label>
+                            <input type="radio" name="rName" value="asc">
+                            <label for="rName">По убыванию</label>
+                            <input type="radio" name="rName" value="desc">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="category">По категории</label>
+                        <input type="checkbox" name="category" id="">
+                        <div>
+                            <label for="rCategory">По возростанию</label>
+                            <input type="radio" name="rCategory" value="asc">
+                            <label for="rCategory">По убыванию</label>
+                            <input type="radio" name="rCategory" value="desc">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="calorific">По калорийности</label>
+                        <input type="checkbox" name="calorific" id="">
+                        <div>
+                            <label for="rCalorific">По возростанию</label>
+                            <input type="radio" name="rCalorific" value="asc">
+                            <label for="rCalorific">По убыванию</label>
+                            <input type="radio" name="rCalorific" value="desc">
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button type="button" value="start" id="sort">Применить</button>
+                    <button type="button" value="start" id="butSortReset">Очистить</button>
+                </div>
+            </div>
+            <div class="filter" id="filterDIv">
+                <h4>Фильтр</h4>
+                <div class="filt">
+                    <div>
+                        <label for="catering">Общепит</label>
+                        <input type="text" name="catering">
+                    </div>
+                    <div>
+                        <p><label for="calorific">Диапозон калорийности</label></p>
+                        <p><span>От:</span><input type="number" name="calorific" min="0" max="300"></p>
+                        <p><span>До:</span><input type="number" name="calorific" min="300" max="3000"></p>
+                    </div>
+                    <div>
+                        <label for="category">Категория</label>
+                        <input type="text" name="category">
+                    </div>
+                    <div>
+                        <p><label for="price">Диапозон стоимости</label></p>
+                        <p><span>От:</span><input type="number" name="price" min="0" max="300"></p>
+                        <p><span>До:</span><input type="number" name="price" min="300" max="6000"></p>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button type="button" value="start" id="butValid">Применить</button>
+                    <button type="button" value="start" id="butValidReset">Очистить</button>
+                    <button type="button" value="start" id="offFilter">Отменить фильтры</button>
+                </div>
+            </div>
+        </section>
+        <section class="sec" id="dishes">
+            
+            
+        </section>
+        <section class="sec" >
+            <h2>Добавление блюда</h2>
+            <form action="http://localhost:5273/api/adminDishes/add" method="post" id="formDish"  >
+                
+                <div>
+                    <label for="name">Название</label>
+                    <input type="text" name="name" required pattern="[А-Яа-яЁё]{1,}">
+                </div>
+                
+                <div>
+                    <label for="price">Стоимость</label>
+                    <input type="text" name="price" required pattern="^[0-9][0-9,\.]+$">
+                </div>
+                <div>
+                    <label for="category">Категория</label>
+                    <input type="text" name="category" required pattern="[А-Яа-яЁё]+">
+                </div>
+                <div>
+                    <label for="calorific">Калорийность</label>
+                    <input type="text" name="calorific" required pattern="^[0-9][0-9,\.]+$">
+                </div>
+                <div>
+                    <label for="weight">Вес</label>
+                    <input type="text" name="weight" required pattern="^[0-9][0-9,\.]+$">
+                </div>
+                <div>
+                    <label for="catering">Название Общепита</label>
+                    <input type="text" name="catering" required pattern="[А-Яа-яЁё]+">
+                </div>
+                <div>
+                    <label for="img">Картинка блюда</label>
+                    <input type="file" name="img"  enctype="multipart/form-data">
+                </div>
+                <div>
+                    <p><label for="description">Описание</label></p>
+                    <p>
+                        <textarea name="description" id="desc" cols="30" rows="5">                         
+                        </textarea>  
+                    </p>                  
+                </div>
+                <div>
+                    <button type="button" id="butDish">Добавить блюдо</button> 
+                    
+                </div>
+            </form>
+        </section>
+        <div id="rigth"><img src="../image/right.png" alt="" srcset=""></div>
+    </main>
+    
+    <script src="..\..\dest\web.js"></script>
+    <script src="..\..\dest\index.js"></script>
+    <script src="..\..\dest\sort.js"></script>
+    <script src="..\..\dest\filter.js"></script>
+</body>
+</html>

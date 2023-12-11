@@ -1,0 +1,33 @@
+.settings,.filter{
+    font-family: Arial, Helvetica, sans-serif; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 24px;
+       
+}
+.setti,.filt{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-around;
+    border-top: 1px solid #f01919;
+    
+}
+.filt{
+    border: none;
+    border-top: 1px solid #f01919;
+    padding-top: 3px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 180px;
+    height: 50px;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+   

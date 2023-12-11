@@ -1,0 +1,18 @@
+.dish{
+    background-color: #FFFFFF;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    width: 240px;
+    min-height: 280px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 5px;
+}
+.imgD{
+    width: 240px;
+    min-height: 280px;
+}
+.bord>span{
+    margin-left:5px ;
+}
